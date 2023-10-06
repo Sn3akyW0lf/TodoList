@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-DO List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="my-form" class="text-bg-dark bg-opacity-50 border border-dark border-size-3 rounded-3 p-5 m-3">
+            <div class="card p-3 m-3">
+                <h2 class="card-header">Add a New To-Do</h2>
+                <div class="card-body">
+                    <span class="card-text">
+                        Adding a new To-Do Task in the System.
+                    </span>
+                    
+                </div>
+            </div>
+            
+            <div>
+                <div id="msg_todo"></div>
+                <label for="todo" class="form-label">To-Do Name</label>
+                <input type="text" id="todo" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Your To-Do Task" />
+            </div>
+
+            <div>
+                <div id="msg_desc"></div>
+                <label for="desc" class="form-label">Description</label>
+                <input type="text" id="desc" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Description" />
+            </div>
+    
+            <input type="submit" value="ADD" class="btn btn-outline-light p-3 m-3" />
+        </form>
+        <div class="container">
+            <h2 class="title">Pending To-Do's</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="d-none">
+                            id
+                        </th>
+                        <th>
+                            To-Do
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tblTodoPending">
+                    <!-- <tr>
+                        <td colspan="5" class="text-center">No data found</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+                <h2 class="title">Completed To-Do's</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="d-none">
+                                id
+                            </th>
+                            <th>
+                                To-Do
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblTodoDone">
+                        <!-- <tr>
+                            <td colspan="5" class="text-center">No data found</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+</body>
+
+</html>
